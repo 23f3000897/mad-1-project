@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>View Detail</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Parking spots</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>lot id</th>
+                <th>Status</th>
+        
+            </tr>
+        </thead>
+        <tbody>
+            {% for spot in spots %}
+            <tr>
+                <td>{{ spot.id }}</td>
+                <td>{{spot.lot_id}}</td>
+                <td>{{  spot.status_text_check }}</td>
+                
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+
+

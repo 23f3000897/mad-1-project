@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Parking Lot</title>
+</head>
+<body>
+    <h1>create parking lot</h1>
+    <form method='POST'>
+        <label for="title">prime_location_name:</label>
+        <input type="text" id="prime_location_name" name="prime_location_name" required><br><br>
+
+        <label for="title">Address:</label>
+        <input type="text" id="Address" name="Address" required><br><br>
+
+        <label for="title">Pincode:</label>
+        <input type="text" id="pincode" name="pincode" required><br><br>
+
+        <label for="title">Price:</label>
+        <input type="text" id="price" name="price" required><br><br>
+
+        <label for="title">maximum spot:</label>
+        <input type="text" id="maximum_number_of_spots" name="maximum_number_of_spots" required><br><br>
+
+        <button type="submit">create</button>
+    </form>
+    <p><a href="{{ url_for('admin_dashboard') }}">Back to Dashboard</a></p>
+</body>
+</html>

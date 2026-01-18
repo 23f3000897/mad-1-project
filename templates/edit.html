@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Parking Lot</title>
+</head>
+<body>
+    <h1>Edit Parking Lot</h1>
+
+    <form method="POST">
+        <!-- Title -->
+        <div>
+            <label for="title">Title</label><br>
+            <input type="text" id="title" name="title" value="{{ post.title }}">
+        </div>
+
+        <!-- Content -->
+        <div>
+            <label for="content">Content</label><br>
+            <textarea id="content" name="content">{{ post.content }}</textarea>
+        </div>
+
+        <!-- Prime Location -->
+        <div>
+            <label for="location">Prime Location</label><br>
+            <input type="text" id="location" name="location" value="{{ post.location }}">
+        </div>
+
+        <!-- Address -->
+        <div>
+            <label for="address">Address</label><br>
+            <input type="text" id="address" name="address" value="{{ post.address }}">
+        </div>
+
+        <!-- Pincode -->
+        <div>
+            <label for="pincode">Pincode</label><br>
+            <input type="text" id="pincode" name="pincode" value="{{ post.pincode }}">
+        </div>
+
+        <!-- Price -->
+        <div>
+            <label for="price">Price</label><br>
+            <input type="text" id="price" name="price" value="{{ post.price }}">
+        </div>
+
+        <!-- Maximum Spots -->
+        <div>
+            <label for="max_spots">Maximum Spots</label><br>
+            <input type="text" id="max_spots" name="max_spots" value="{{ post.max_spots }}">
+        </div>
+
+        <button type="submit">Update</button>
+    </form>
+
+    <p><a href="{{ url_for('admin_dashboard') }}">Back to Admin Dashboard</a></p>
+</body>
+</html>
